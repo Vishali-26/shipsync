@@ -12,7 +12,7 @@ const Products = ({ user }) => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8081/api/customer/products');
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081'}/api/customer/products`);
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -68,7 +68,7 @@ const Products = ({ user }) => {
     if (!shippingAddress) return;
 
     try {
-      const response = await fetch('http://localhost:8081/api/customer/orders', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081'}/api/customer/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
