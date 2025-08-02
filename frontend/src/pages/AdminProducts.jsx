@@ -211,7 +211,7 @@ const AdminProducts = ({ user }) => {
                       onChange={(e) => setEditingProduct({...editingProduct, price: e.target.value})}
                     />
                   ) : (
-                    `$${product.price}`
+                    `₹${product.price}`
                   )}
                 </td>
                 <td>

@@ -78,7 +78,7 @@ const Orders = ({ user }) => {
                   </span>
                 </div>
                 <div className="order-details">
-                  <p><strong>Total:</strong> ${order.totalAmount}</p>
+                  <p><strong>Total:</strong> ₹{order.totalAmount}</p>
                   <p><strong>Shipping Address:</strong> {order.shippingAddress}</p>
                 </div>
               </div>

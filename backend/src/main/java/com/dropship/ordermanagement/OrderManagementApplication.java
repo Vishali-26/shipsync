@@ -28,16 +28,16 @@ public class OrderManagementApplication implements CommandLineRunner {
         productRepository.deleteAll();
 
         Product[] defaultProducts = {
-            new Product("Wireless Bluetooth Headphones", "High-quality wireless headphones with noise cancellation", 79.99, 25, "Electronics"),
-            new Product("Smart Fitness Watch", "Track your fitness goals with this advanced smartwatch", 199.99, 15, "Electronics"),
-            new Product("Organic Cotton T-Shirt", "Comfortable and eco-friendly cotton t-shirt", 24.99, 50, "Clothing"),
-            new Product("Stainless Steel Water Bottle", "Insulated water bottle that keeps drinks cold for 24 hours", 29.99, 30, "Home & Garden"),
-            new Product("Wireless Phone Charger", "Fast wireless charging pad compatible with all Qi devices", 34.99, 20, "Electronics"),
-            new Product("Yoga Mat Premium", "Non-slip yoga mat perfect for all types of workouts", 49.99, 18, "Sports & Fitness"),
-            new Product("Coffee Maker Deluxe", "Programmable coffee maker with built-in grinder", 149.99, 12, "Home & Garden"),
-            new Product("Gaming Mechanical Keyboard", "RGB backlit mechanical keyboard for gaming enthusiasts", 89.99, 22, "Electronics"),
-            new Product("Running Shoes Pro", "Lightweight running shoes with advanced cushioning", 129.99, 35, "Sports & Fitness"),
-            new Product("Ceramic Dinner Set", "Beautiful 16-piece ceramic dinner set for family meals", 69.99, 14, "Home & Garden")
+            new Product("Wireless Bluetooth Headphones", "High-quality wireless headphones with noise cancellation", 6499.00, 25, "Electronics"),
+            new Product("Smart Fitness Watch", "Track your fitness goals with this advanced smartwatch", 15999.00, 15, "Electronics"),
+            new Product("Organic Cotton T-Shirt", "Comfortable and eco-friendly cotton t-shirt", 1999.00, 50, "Clothing"),
+            new Product("Stainless Steel Water Bottle", "Insulated water bottle that keeps drinks cold for 24 hours", 2499.00, 30, "Home & Garden"),
+            new Product("Wireless Phone Charger", "Fast wireless charging pad compatible with all Qi devices", 2899.00, 20, "Electronics"),
+            new Product("Yoga Mat Premium", "Non-slip yoga mat perfect for all types of workouts", 3999.00, 18, "Sports & Fitness"),
+            new Product("Coffee Maker Deluxe", "Programmable coffee maker with built-in grinder", 12499.00, 12, "Home & Garden"),
+            new Product("Gaming Mechanical Keyboard", "RGB backlit mechanical keyboard for gaming enthusiasts", 7299.00, 22, "Electronics"),
+            new Product("Running Shoes Pro", "Lightweight running shoes with advanced cushioning", 10499.00, 35, "Sports & Fitness"),
+            new Product("Ceramic Dinner Set", "Beautiful 16-piece ceramic dinner set for family meals", 5699.00, 14, "Home & Garden")
         };
 
         for (Product product : defaultProducts) {

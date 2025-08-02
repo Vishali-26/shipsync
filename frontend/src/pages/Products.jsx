@@ -122,14 +122,14 @@ const Products = ({ user }) => {
                     <span>{item.quantity}</span>
                     <button onClick={() => updateCartQuantity(item.id, item.quantity + 1)}>+</button>
                   </div>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>₹{(item.price * item.quantity).toFixed(2)}</span>
                   <button onClick={() => removeFromCart(item.id)} className="btn btn-danger btn-small">
                     Remove
                   </button>
                 </div>
               ))}
               <div className="cart-total">
-                <strong>Total: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}</strong>
+                <strong>Total: ₹{cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}</strong>
               </div>
               <button onClick={placeOrder} className="btn btn-success">
                 Place Order
@@ -150,7 +150,7 @@ const Products = ({ user }) => {
                 <p className="product-description">{product.description}</p>
                 <p className="product-category">Category: {product.category}</p>
                 <div className="product-details">
-                  <span className="product-price">${product.price}</span>
+                  <span className="product-price">₹{product.price}</span>
                   <span className="product-stock">
                     {product.stockQuantity > 0 ? `${product.stockQuantity} in stock` : 'Out of stock'}
                   </span>
