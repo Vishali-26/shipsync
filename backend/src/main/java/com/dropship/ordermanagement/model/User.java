@@ -13,9 +13,9 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private String role = "CUSTOMER"; // Default role is CUSTOMER
+    private String role = "CUSTOMER"; 
 
-    // Constructors
+   
     public User() {}
 
     public User(String name, String email, String password) {
@@ -32,7 +32,7 @@ public class User {
         this.role = role;
     }
 
-    // Simple Getters and Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

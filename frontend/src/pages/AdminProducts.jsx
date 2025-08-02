@@ -15,7 +15,7 @@ const AdminProducts = ({ user }) => {
   });
   const navigate = useNavigate();
 
-  // Check if user is admin
+  
   useEffect(() => {
     if (!user || user.role !== 'ADMIN') {
       navigate('/login');

@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    // Simple methods for beginners
+    
     List<Order> findByUserId(Long userId);
     List<Order> findByStatus(String status);
 }

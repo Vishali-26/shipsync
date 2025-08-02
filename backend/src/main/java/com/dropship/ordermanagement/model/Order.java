@@ -10,13 +10,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;  // Simple foreign key instead of complex relationship
+    private Long userId;  
     private String orderNumber;
-    private String status = "PENDING";  // Simple string instead of enum
+    private String status = "PENDING";  
     private Double totalAmount;
     private String shippingAddress;
 
-    // Constructors
+  
     public Order() {
         this.orderNumber = "ORD-" + System.currentTimeMillis();
     }
@@ -28,7 +28,7 @@ public class Order {
         this.shippingAddress = shippingAddress;
     }
 
-    // Simple Getters and Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

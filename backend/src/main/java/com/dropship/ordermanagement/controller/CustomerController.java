@@ -21,28 +21,27 @@ public class CustomerController {
     @Autowired
     private OrderRepository orderRepository;
 
-    // Customer can browse all products
+   
     @GetMapping("/products")
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
-    // Customer can view their orders
+    
     @GetMapping("/orders/{userId}")
     public List<Order> getMyOrders(@PathVariable Long userId) {
         return orderRepository.findByUserId(userId);
     }
 
-    // Customer can place an order
+    
     @PostMapping("/orders")
     public Order placeOrder(@RequestBody Order order) {
-        // Generate order number
+        
         order.setOrderNumber("ORD-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase());
         order.setStatus("PENDING");
         return orderRepository.save(order);
     }
 
-    // Customer can view order by ID
     @GetMapping("/orders/details/{orderId}")
     public Order getOrderDetails(@PathVariable Long orderId) {
         return orderRepository.findById(orderId).orElse(null);

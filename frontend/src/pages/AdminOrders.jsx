@@ -6,7 +6,7 @@ const AdminOrders = ({ user }) => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Check if user is admin
+  
   useEffect(() => {
     if (!user || user.role !== 'ADMIN') {
       navigate('/login');
@@ -36,7 +36,7 @@ const AdminOrders = ({ user }) => {
       });
       
       if (response.ok) {
-        fetchOrders(); // Refresh the orders list
+        fetchOrders(); 
       }
     } catch (error) {
       console.error('Error updating order status:', error);

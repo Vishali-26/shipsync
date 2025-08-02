@@ -16,32 +16,32 @@ public class SimpleOrderController {
     @Autowired
     private OrderRepository orderRepository;
     
-    // Get all orders
+   
     @GetMapping
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
     }
     
-    // Get order by ID
+   
     @GetMapping("/{id}")
     public Order getOrderById(@PathVariable Long id) {
         Optional<Order> order = orderRepository.findById(id);
         return order.orElse(null);
     }
     
-    // Get orders by user ID
+   
     @GetMapping("/user/{userId}")
     public List<Order> getOrdersByUserId(@PathVariable Long userId) {
         return orderRepository.findByUserId(userId);
     }
     
-    // Create new order
+   
     @PostMapping
     public Order createOrder(@RequestBody Order order) {
         return orderRepository.save(order);
     }
     
-    // Update order status
+    
     @PutMapping("/{id}/status")
     public Order updateOrderStatus(@PathVariable Long id, @RequestParam String status) {
         Optional<Order> optionalOrder = orderRepository.findById(id);
@@ -53,7 +53,7 @@ public class SimpleOrderController {
         return null;
     }
     
-    // Update order
+  
     @PutMapping("/{id}")
     public Order updateOrder(@PathVariable Long id, @RequestBody Order orderDetails) {
         Optional<Order> optionalOrder = orderRepository.findById(id);
@@ -67,7 +67,7 @@ public class SimpleOrderController {
         return null;
     }
     
-    // Delete order
+    
     @DeleteMapping("/{id}")
     public String deleteOrder(@PathVariable Long id) {
         orderRepository.deleteById(id);

@@ -16,26 +16,26 @@ public class SimpleProductController {
     @Autowired
     private ProductRepository productRepository;
     
-    // Get all products
+   
     @GetMapping
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
     
-    // Get product by ID
+   
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
         Optional<Product> product = productRepository.findById(id);
         return product.orElse(null);
     }
     
-    // Create new product
+    
     @PostMapping
     public Product createProduct(@RequestBody Product product) {
         return productRepository.save(product);
     }
     
-    // Update product
+    
     @PutMapping("/{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
         Optional<Product> optionalProduct = productRepository.findById(id);
@@ -51,20 +51,20 @@ public class SimpleProductController {
         return null;
     }
     
-    // Delete product
+    
     @DeleteMapping("/{id}")
     public String deleteProduct(@PathVariable Long id) {
         productRepository.deleteById(id);
         return "Product deleted successfully";
     }
     
-    // Search products by name
+  
     @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String name) {
         return productRepository.findByNameContaining(name);
     }
     
-    // Get products by category
+   
     @GetMapping("/category/{category}")
     public List<Product> getProductsByCategory(@PathVariable String category) {
         return productRepository.findByCategory(category);

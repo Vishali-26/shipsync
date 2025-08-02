@@ -12,7 +12,7 @@ const Home = () => {
       position: 'relative',
       overflow: 'hidden'
     }}>
-      {/* Background decoration */}
+      {}
       <div style={{
         position: 'absolute',
         top: '-50%',
@@ -135,7 +135,7 @@ const Home = () => {
           </Link>
         </div>
 
-        {/* Feature highlights */}
+        {}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',

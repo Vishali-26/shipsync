@@ -16,7 +16,7 @@ public class Product {
     private Integer stockQuantity;
     private String category;
 
-    // Constructors
+   
     public Product() {}
 
     public Product(String name, String description, Double price, Integer stockQuantity, String category) {
@@ -27,7 +27,7 @@ public class Product {
         this.category = category;
     }
 
-    // Simple Getters and Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

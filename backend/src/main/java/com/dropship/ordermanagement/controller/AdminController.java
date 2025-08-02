@@ -21,7 +21,7 @@ public class AdminController {
     @Autowired
     private OrderRepository orderRepository;
 
-    // Admin can manage products
+    
     @GetMapping("/products")
     public List<Product> getAllProducts() {
         return productRepository.findAll();
@@ -52,25 +52,25 @@ public class AdminController {
         productRepository.deleteById(id);
     }
 
-    // Admin can view all orders
+    
     @GetMapping("/orders")
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
     }
 
-    // Admin can update order status
+    
     @PutMapping("/orders/{id}/status")
     public Order updateOrderStatus(@PathVariable Long id, @RequestBody String status) {
         Optional<Order> optionalOrder = orderRepository.findById(id);
         if (optionalOrder.isPresent()) {
             Order order = optionalOrder.get();
-            order.setStatus(status.replace("\"", "")); // Remove quotes from JSON string
+            order.setStatus(status.replace("\"", "")); 
             return orderRepository.save(order);
         }
         return null;
     }
 
-    // Admin can view order details
+    
     @GetMapping("/orders/{id}")
     public Order getOrderDetails(@PathVariable Long id) {
         return orderRepository.findById(id).orElse(null);

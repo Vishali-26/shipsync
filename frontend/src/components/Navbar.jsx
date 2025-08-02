@@ -14,10 +14,10 @@ const Navbar = ({ user, setUser }) => {
         </Link>
 
         <div className="nav-menu">
-          {/* Show navigation links only when user is logged in */}
+          {}
           {user && (
             <>
-              {/* Customer Navigation */}
+              {}
               {user.role === 'CUSTOMER' && (
                 <>
                   <Link to="/products" className="nav-link">
@@ -29,7 +29,7 @@ const Navbar = ({ user, setUser }) => {
                 </>
               )}
 
-              {/* Admin Navigation */}
+              {}
               {user.role === 'ADMIN' && (
                 <>
                   <Link to="/admin/products" className="nav-link">
